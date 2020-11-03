@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum lengthUnits: String, CaseIterable {
+    case km, m, cm, mm, um, nm
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var swapButton: UIButton!
@@ -28,11 +32,24 @@ class ViewController: UIViewController {
         swapButton.layer.cornerRadius = 10
         swapButton.layer.borderWidth = 2
         swapButton.layer.borderColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1.0).cgColor
+        
+        unitsSegments1.selectedSegmentIndex = 0
+        unitsSegments1.insertSegment(withTitle: "mile", at: 1, animated: false)
+        unitsSegments1.removeAllSegments()
+        
+//        let lengthUnitsCount = lengthUnits.allCases.count
+        for unit in lengthUnits.allCases {
+            if unit.rawValue != "um" {
+                unitsSegments1.insertSegment(withTitle: unit.rawValue, at: lengthUnits.allCases.count, animated: false)
+            } else {
+                unitsSegments1.insertSegment(withTitle: "µm", at: lengthUnits.allCases.count, animated: false)
+            }
+        }
     }
     
-//    overr override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
 
