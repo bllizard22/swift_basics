@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,17 +12,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_grad" translatesAutoresizingMaskIntoConstraints="NO" id="l0D-fI-0Dt">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-44" width="375" height="745"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="y02-QW-twy">
-                                <rect key="frame" x="40" y="216" width="334" height="106"/>
+                                <rect key="frame" x="40" y="172" width="295" height="106"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rTt-DA-sOA">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="41"/>
                                         <color key="backgroundColor" red="0.34949004647465043" green="0.78039369097106603" blue="0.66186386647966378" alpha="0.15119327910958905" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="HZv-hZ-XPB"/>
@@ -34,7 +34,7 @@
                                         <color key="selectedSegmentTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJO-Fj-FTd">
-                                        <rect key="frame" x="0.0" y="64" width="334" height="42"/>
+                                        <rect key="frame" x="0.0" y="64" width="295" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="yaS-Y9-Vcb"/>
                                         </constraints>
@@ -45,10 +45,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="tm1-U7-sGB">
-                                <rect key="frame" x="40" y="382" width="334" height="106"/>
+                                <rect key="frame" x="40" y="338" width="295" height="106"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-gc-N27">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="41"/>
                                         <color key="backgroundColor" red="0.34949004647465043" green="0.78039369097106603" blue="0.66186386647966378" alpha="0.15119327910958905" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="d2X-2J-dap"/>
@@ -60,7 +60,7 @@
                                         <color key="selectedSegmentTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </segmentedControl>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyK-cy-kNs">
-                                        <rect key="frame" x="0.0" y="64" width="334" height="42"/>
+                                        <rect key="frame" x="0.0" y="64" width="295" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="8rA-Rp-kGx"/>
                                         </constraints>
@@ -70,7 +70,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hl4-ha-dfW">
-                                <rect key="frame" x="330" y="504" width="36" height="36"/>
+                                <rect key="frame" x="291" y="460" width="36" height="36"/>
                                 <color key="backgroundColor" red="0.44311451909999999" green="0.89549392459999999" blue="0.75691938400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="36" id="Nom-to-sa9"/>
@@ -84,7 +84,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHx-pp-AEJ">
-                                <rect key="frame" x="152" y="116" width="110.5" height="36"/>
+                                <rect key="frame" x="132.5" y="72" width="110.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="36"/>
                                 <color key="textColor" red="0.041336686643835614" green="0.38620311695461179" blue="0.55457586181419927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         unitsSegments1.insertSegment(withTitle: "mile", at: 1, animated: false)
         unitsSegments1.removeAllSegments()
         
-//        let lengthUnitsCount = lengthUnits.allCases.count
+        //let lengthUnitsCount = lengthUnits.allCases.count
         for unit in lengthUnits.allCases {
             if unit.rawValue != "um" {
                 unitsSegments1.insertSegment(withTitle: unit.rawValue, at: lengthUnits.allCases.count, animated: false)
