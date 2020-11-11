@@ -27,6 +27,10 @@ class emojiTableViewController: UITableViewController {
         
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
+    
+    @IBAction func unwindSegueToMainTable(segue: UIStoryboardSegue) {
+        
+    }
 
     // MARK: - Table view data source
 
