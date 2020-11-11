@@ -10,6 +10,8 @@ import UIKit
 
 class NewEmojiTableViewController: UITableViewController {
 
+    var saveEmoji = Emoji(emoji: "", name: "", description: "", isFavourite: false)
+    
     @IBOutlet weak var emojiTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -24,6 +26,11 @@ class NewEmojiTableViewController: UITableViewController {
         saveButton.isEnabled = !emojiText.isEmpty && !nameText.isEmpty && !descriptionText.isEmpty
     }
     
+    private func updateUI() {
+        emojiTextField.text = saveEmoji.emoji
+        nameTextField.text = saveEmoji.name
+        descriptionTextField.text = saveEmoji.description
+    }
     @IBAction func saveButtonObserver(_ sender: UITextField) {
         
         textFieldsChecker()
@@ -32,7 +39,22 @@ class NewEmojiTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateUI()
         textFieldsChecker()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "saveSegue" else {
+            return
+        }
+        
+        let emoji = emojiTextField.text ?? ""
+        let name = nameTextField.text ?? ""
+        let description = descriptionTextField.text ?? ""
+        
+        self.saveEmoji = Emoji(emoji: emoji, name: name, description: description, isFavourite: self.saveEmoji.isFavourite)
     }
 
     // MARK: - Table view data source

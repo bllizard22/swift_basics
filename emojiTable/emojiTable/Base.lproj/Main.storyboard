@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ILR-tY-ZQu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ILR-tY-ZQu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +15,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QbT-rw-HQ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emojiCell" rowHeight="77" id="Fax-fc-Zz8" customClass="emojiTableViewCell" customModule="emojiTable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="77"/>
@@ -62,6 +64,7 @@
                                     <outlet property="decriptionLabel" destination="RGo-ca-LdC" id="u9s-02-eNH"/>
                                     <outlet property="emojiLabel" destination="AS3-Ul-vTF" id="EMo-li-MLz"/>
                                     <outlet property="nameLabel" destination="LMs-1A-p5d" id="6rf-de-O9w"/>
+                                    <segue destination="9bh-NV-StT" kind="show" identifier="editEmoji" id="4Uq-Rg-boo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,7 +92,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="utg-sT-llc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Emoji" id="5lC-jz-9PH">
                                 <cells>
@@ -187,12 +190,17 @@
                                 <segue destination="jLQ-pt-49H" kind="unwind" unwindAction="unwindSegueToMainTableWithSegue:" id="rsi-bu-2A8"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="4u3-SZ-U1Z"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="4u3-SZ-U1Z">
+                            <connections>
+                                <segue destination="jLQ-pt-49H" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueToMainTableWithSegue:" id="g89-St-eAS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextField" destination="lAl-7O-u8U" id="dKa-ot-4Uj"/>
                         <outlet property="emojiTextField" destination="2BS-Ip-VUS" id="cps-HV-hrM"/>
                         <outlet property="nameTextField" destination="926-Qj-m3d" id="k3i-DP-a54"/>
+                        <outlet property="saveButton" destination="4u3-SZ-U1Z" id="nce-qF-XaW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycj-al-bsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -238,4 +246,15 @@
             <point key="canvasLocation" x="1760.8695652173915" y="-21.428571428571427"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Uq-Rg-boo"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
