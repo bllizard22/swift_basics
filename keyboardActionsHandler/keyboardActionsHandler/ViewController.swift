@@ -36,16 +36,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
 //    }
     
+    private func stringToCurrency(value: Double) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale.current
+        
+        return numberFormatter.string(from: NSNumber(value: value))!
+    }
+    
     private func updateLabel() {
         guard textField.text != "" else {
             return
         }
-        textLabel.text = textField.text
-        textField.text = ""
+        guard let value = Double(textField.text!) else {
+            textLabel.text = "0"
+            return
+        }
+        
+        textLabel.text = stringToCurrency(value: value)
+//        textField.text = ""
     }
     
     @IBAction func buttonDidPressed(_ sender: UIButton) {
         updateLabel()
+        textField.text = ""
         textField.endEditing(true)
     }
     
@@ -63,10 +77,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        updateLabel()
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        textField.resignFirstRespond
         updateLabel()
+        textField.text = ""
         textField.endEditing(true)
         return true
     }
