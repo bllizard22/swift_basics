@@ -52,9 +52,9 @@
                             <constraint firstItem="YPg-Bx-Xtb" firstAttribute="top" secondItem="6Xl-Mn-UuD" secondAttribute="bottom" constant="44" id="59u-J4-o4s"/>
                             <constraint firstItem="YPg-Bx-Xtb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WLS-RH-nDl"/>
                             <constraint firstItem="6Xl-Mn-UuD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dOV-yZ-UOy"/>
-                            <constraint firstItem="6Xl-Mn-UuD" firstAttribute="top" secondItem="gKm-LQ-xVl" secondAttribute="bottom" constant="147" id="mAk-4h-1hr"/>
+                            <constraint firstItem="6Xl-Mn-UuD" firstAttribute="top" secondItem="gKm-LQ-xVl" secondAttribute="bottom" constant="110" id="mAk-4h-1hr"/>
                             <constraint firstItem="gKm-LQ-xVl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nzM-Vd-aVi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="YPg-Bx-Xtb" secondAttribute="bottom" constant="150" id="yxh-st-KXa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="YPg-Bx-Xtb" secondAttribute="bottom" constant="110" id="yxh-st-KXa"/>
                         </constraints>
                     </view>
                     <connections>
