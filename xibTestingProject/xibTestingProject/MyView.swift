@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable class MyView: UIView {
+class MyView: UIView {
 
     @IBOutlet weak var textLabelTest: UILabel!
     

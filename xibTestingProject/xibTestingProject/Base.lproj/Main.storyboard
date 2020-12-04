@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YK-fZ-GPv" customClass="MyView" customModule="xibTestingProject" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="0.0" width="300" height="300"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="cG6-5F-Y7u"/>
@@ -26,15 +26,14 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="textLabel" value="Hello"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="textLabelHere" value="ghj"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="0YK-fZ-GPv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="S1G-3T-FfZ"/>
-                            <constraint firstItem="0YK-fZ-GPv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wMv-vX-Jdz"/>
+                            <constraint firstItem="0YK-fZ-GPv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M1F-w8-tEk"/>
+                            <constraint firstItem="0YK-fZ-GPv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mWd-th-roE"/>
                         </constraints>
                     </view>
                 </viewController>
