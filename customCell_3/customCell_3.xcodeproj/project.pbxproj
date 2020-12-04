@@ -13,6 +13,8 @@
 		01864AB3257A2AE900BE46F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01864AB1257A2AE900BE46F7 /* Main.storyboard */; };
 		01864AB5257A2AEA00BE46F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01864AB4257A2AEA00BE46F7 /* Assets.xcassets */; };
 		01864AB8257A2AEA00BE46F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01864AB6257A2AEA00BE46F7 /* LaunchScreen.storyboard */; };
+		01864AC7257A2DF500BE46F7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864AC5257A2DF500BE46F7 /* CustomTableViewCell.swift */; };
+		01864AC8257A2DF500BE46F7 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01864AC6257A2DF500BE46F7 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		01864AB4257A2AEA00BE46F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01864AB7257A2AEA00BE46F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01864AB9257A2AEA00BE46F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01864AC5257A2DF500BE46F7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		01864AC6257A2DF500BE46F7 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				01864AAD257A2AE900BE46F7 /* SceneDelegate.swift */,
 				01864AAF257A2AE900BE46F7 /* ViewController.swift */,
 				01864AB1257A2AE900BE46F7 /* Main.storyboard */,
+				01864AC5257A2DF500BE46F7 /* CustomTableViewCell.swift */,
+				01864AC6257A2DF500BE46F7 /* CustomTableViewCell.xib */,
 				01864AB4257A2AEA00BE46F7 /* Assets.xcassets */,
 				01864AB6257A2AEA00BE46F7 /* LaunchScreen.storyboard */,
 				01864AB9257A2AEA00BE46F7 /* Info.plist */,
@@ -126,6 +132,7 @@
 			files = (
 				01864AB8257A2AEA00BE46F7 /* LaunchScreen.storyboard in Resources */,
 				01864AB5257A2AEA00BE46F7 /* Assets.xcassets in Resources */,
+				01864AC8257A2DF500BE46F7 /* CustomTableViewCell.xib in Resources */,
 				01864AB3257A2AE900BE46F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				01864AB0257A2AE900BE46F7 /* ViewController.swift in Sources */,
 				01864AAC257A2AE900BE46F7 /* AppDelegate.swift in Sources */,
+				01864AC7257A2DF500BE46F7 /* CustomTableViewCell.swift in Sources */,
 				01864AAE257A2AE900BE46F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

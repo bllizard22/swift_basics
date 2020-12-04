@@ -22,26 +22,26 @@ class TableViewController: UITableViewController{
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return items.count
-    }
-
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 4
+//    // MARK: - Table view data source
+//
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return items.count
 //    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-
-        cell.cellLabel.text = items[indexPath.row]
-        cell.textLabelHere = items[indexPath.row]
-
-        return cell
-    }
+//
+////    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+////        // #warning Incomplete implementation, return the number of rows
+////        return 4
+////    }
+//
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+//
+//        cell.cellLabel.text = items[indexPath.row]
+//        cell.textLabelHere = items[indexPath.row]
+//
+//        return cell
+//    }
 
     /*
     // Override to support conditional editing of the table view.
