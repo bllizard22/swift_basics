@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     private let myArray: NSArray = ["First","Second","Third"]
-    private var myTableView: UITableView!
+//    private var myTableView: UITableView!
     private var newTableView: UITableView!
 
     override func viewDidLoad() {
@@ -20,10 +20,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
 
-        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        myTableView.dataSource = self
-        myTableView.delegate = self
+//        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+//        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+//        myTableView.dataSource = self
+//        myTableView.delegate = self
 //        self.view.addSubview(myTableView)
         
         newTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
