@@ -7,11 +7,13 @@
 
 import UIKit
 
-@IBDesignable class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
+    @IBOutlet var customCell: UITableViewCell!
+    
     @IBOutlet weak var cellLabel: UILabel!
     
-    @IBInspectable var textLabelHere: String {
+    @IBInspectable var textLabelHere: String? {
         get {
             return cellLabel.text!
         }
@@ -26,10 +28,12 @@ import UIKit
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commonInit()
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
     }
 
     override func awakeFromNib() {
@@ -41,6 +45,13 @@ import UIKit
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func commonInit() {
+        Bundle.main.loadNibNamed("TestView", owner: self, options: nil)
+        addSubview(customCell)
+        customCell.frame = self.bounds
+        customCell.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
 }
