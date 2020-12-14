@@ -11,15 +11,22 @@ class CardTableViewCell: UITableViewCell {
 
     @IBInspectable @IBOutlet weak var cellLabel: UILabel!
     
+    override func didAddSubview(_ subview: UIView) {
+        super.didAddSubview(subview)
+//        self.contentView.backgroundColor = .green
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.contentView.backgroundColor = .green
+        self.contentView.autoresizingMask = .flexibleHeight
+        self.contentView.frame.size.height = 200
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

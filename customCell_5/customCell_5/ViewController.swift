@@ -36,8 +36,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cardTableViewCell", for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cardTableViewCell", for: indexPath as IndexPath) as! CardTableViewCell
         cell.textLabel!.text = "\(cards[indexPath.row])"
+        cell.cellLabel?.text = "\(cards[indexPath.row])"
+//        cell.cellLabel.font = cell.cellLabel.font.withSize(72)
+//        cell.contentView.frame.size.height = 200
+        cell.contentView.bounds.size.height = 200
+//        cell.contentView.backgroundColor = .green
         return cell
     }
 
