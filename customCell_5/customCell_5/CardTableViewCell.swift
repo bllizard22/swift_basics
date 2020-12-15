@@ -13,14 +13,12 @@ class CardTableViewCell: UITableViewCell {
     
     override func didAddSubview(_ subview: UIView) {
         super.didAddSubview(subview)
-//        self.contentView.backgroundColor = .green
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.contentView.backgroundColor = .green
-        self.contentView.autoresizingMask = .flexibleHeight
-        self.contentView.frame.size.height = 200
+//        self.contentView.autoresizingMask = .flexibleHeight
 
     }
 

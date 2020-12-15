@@ -15,7 +15,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+//        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+//        let barHeight: CGFloat =
+        let barHeight: CGFloat = view.safeAreaInsets.top
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
         
@@ -23,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cardTableView.register(UINib(nibName: "CardTableViewCell", bundle: nil), forCellReuseIdentifier: "cardTableViewCell")
         cardTableView.dataSource = self
         cardTableView.delegate = self
+        cardTableView.rowHeight = 200
         view.addSubview(cardTableView)
     }
 
@@ -37,11 +40,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardTableViewCell", for: indexPath as IndexPath) as! CardTableViewCell
-        cell.textLabel!.text = "\(cards[indexPath.row])"
+//        cell.textLabel!.text = "\(cards[indexPath.row])"
         cell.cellLabel?.text = "\(cards[indexPath.row])"
-//        cell.cellLabel.font = cell.cellLabel.font.withSize(72)
+        cell.cellLabel.font = cell.cellLabel.font.withSize(24)
 //        cell.contentView.frame.size.height = 200
         cell.contentView.bounds.size.height = 200
+        
 //        cell.contentView.backgroundColor = .green
         return cell
     }
