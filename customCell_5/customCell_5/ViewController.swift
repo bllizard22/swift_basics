@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    var navCon: UINavigationController!
+//    var navCon: UINavigationController!
     var cardTableView: UITableView!
     
     var cards: [String] = ["First", "Second", "Third", "Fourth"]
