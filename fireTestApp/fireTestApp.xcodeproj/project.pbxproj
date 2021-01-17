@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8520AB6425B3601E00542B1E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8520AB6325B3601E00542B1E /* Task.swift */; };
+		8520AB6725B3602800542B1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8520AB6625B3602800542B1E /* User.swift */; };
 		85F0658E25B0331F006FE102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0658D25B0331F006FE102 /* AppDelegate.swift */; };
 		85F0659025B0331F006FE102 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0658F25B0331F006FE102 /* SceneDelegate.swift */; };
 		85F0659225B0331F006FE102 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F0659125B0331F006FE102 /* LoginViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		43F0D1DEA6F6A3ECD8BF1726 /* Pods_fireTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fireTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F5BC2188CFFDFF4214F5D4 /* Pods-fireTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireTestApp.debug.xcconfig"; path = "Target Support Files/Pods-fireTestApp/Pods-fireTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8520AB6325B3601E00542B1E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		8520AB6625B3602800542B1E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		85F0658A25B0331F006FE102 /* fireTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fireTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F0658D25B0331F006FE102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F0658F25B0331F006FE102 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		85F0658C25B0331F006FE102 /* fireTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				8520AB6325B3601E00542B1E /* Task.swift */,
+				8520AB6625B3602800542B1E /* User.swift */,
 				85F0659125B0331F006FE102 /* LoginViewController.swift */,
 				85F065AA25B03A96006FE102 /* TasksViewController.swift */,
 				85F0659325B0331F006FE102 /* Main.storyboard */,
@@ -214,6 +220,8 @@
 			files = (
 				85F0659225B0331F006FE102 /* LoginViewController.swift in Sources */,
 				85F065AB25B03A96006FE102 /* TasksViewController.swift in Sources */,
+				8520AB6725B3602800542B1E /* User.swift in Sources */,
+				8520AB6425B3601E00542B1E /* Task.swift in Sources */,
 				85F0658E25B0331F006FE102 /* AppDelegate.swift in Sources */,
 				85F0659025B0331F006FE102 /* SceneDelegate.swift in Sources */,
 			);
