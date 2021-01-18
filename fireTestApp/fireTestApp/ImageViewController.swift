@@ -18,8 +18,9 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    // Download 1.jpg from Storage and set it as image in ImageView
         let storageRef = storage.reference().child("images")
+        
+    // Download 1.jpg from Storage and set it as image in ImageView
         let imageRef = storageRef.child("1.jpg")
         
         imageRef.getData(maxSize: 1 * 1024 * 1024) { [weak self] data, error in

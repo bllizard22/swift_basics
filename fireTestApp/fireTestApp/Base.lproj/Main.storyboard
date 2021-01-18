@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IKr-QD-1EV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oWy-Xk-H0W">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -189,8 +189,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:vgI-N1-e9x:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vgI-N1-e9x">
-                                <rect key="frame" x="7" y="247" width="400" height="401"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:vgI-N1-e9x:image" translatesAutoresizingMaskIntoConstraints="NO" id="vgI-N1-e9x">
+                                <rect key="frame" x="7" y="248" width="400" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="MGz-5K-zw7"/>
                                     <constraint firstAttribute="width" constant="400" id="etg-w9-eWJ"/>
@@ -288,7 +288,7 @@
         <segue reference="bjA-sd-GZ5"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="imageView:vgI-N1-e9x:image" catalog="system" width="115" height="128">
+        <image name="imageView:vgI-N1-e9x:image" width="115" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKywzNjlDS0xQU1UkbnVsbNcNDg8QERITFBUW
