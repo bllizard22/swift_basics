@@ -1,11 +1,12 @@
 //
-//  PhotosCollectionViewController.swift
-//  PhotoTapps
+//  PhotosViewController.swift
+//  fireTestApp
 //
-//  Created by Nikolay Kryuchkov on 10.01.2021.
+//  Created by Nikolay Kryuchkov on 18.01.2021.
 //
 
 import UIKit
+import Firebase
 
 struct ImageItems {
     var name: String
@@ -21,14 +22,14 @@ struct GlobalVariables {
                                             4: ImageItems(name: "dog4", liked: true)]
 }
 
-class PhotosCollectionViewController: UICollectionViewController {
+class PhotosViewController: UICollectionViewController {
 
     let paddingWidth: CGFloat = 3
     let itemsPerRow: CGFloat = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         overrideUserInterfaceStyle = .dark
         
         // Count size of item based on screen size
@@ -48,18 +49,8 @@ class PhotosCollectionViewController: UICollectionViewController {
         
         // Turn off scroll indicator
         collectionView.showsVerticalScrollIndicator = false
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "pickImageSegue" {
-            let photoVC = segue.destination as! PhotoViewController
-            let cell = sender as! PhotoCell
-            photoVC.image = cell.cellImageView.image
-            photoVC.imageID = cell.imageID
-        }
-    }
 
+    }
 
     // MARK: UICollectionViewDataSource
 
@@ -91,28 +82,3 @@ class PhotosCollectionViewController: UICollectionViewController {
     }
 
 }
-
-//extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let paddingWidth = paddingValue * (itemsPerRow + 1)
-//        let itemWidth = CGFloat(Int( (collectionView.frame.width - paddingWidth) / itemsPerRow ))
-//        return CGSize(width: itemWidth, height: itemWidth)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: paddingValue
-//                            , left: paddingValue
-//                            , bottom: paddingValue
-//                            , right: paddingValue)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return paddingValue
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//
-//        return paddingValue
-//    }
-//}
