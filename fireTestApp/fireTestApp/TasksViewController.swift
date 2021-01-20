@@ -37,7 +37,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             
             self?.tasks = tasksBuffer
-            self? .tableView.reloadData()
+            self?.tableView.reloadData()
         }
     }
     
