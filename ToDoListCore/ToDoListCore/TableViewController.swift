@@ -10,7 +10,9 @@ import CoreData
 
 class TableViewController: UITableViewController {
     
+    // Array of Task (declared in .xcdatamodeld)
     var tasks: [Task] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,11 +23,14 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         let context = getContext()
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        // Sorting of tasks list
 //        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
 //        fetchRequest.sortDescriptors = [sortDescriptor]
         
+        // Obtain data from context
         do {
             try tasks = context.fetch(fetchRequest)
         } catch let error as NSError {
@@ -35,6 +40,7 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    // Save button pressed
     @IBAction func saveTaskAction(_ sender: Any) {
         let alertController = UIAlertController(title: "New Task", message: "Please add a new task", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
@@ -55,6 +61,7 @@ class TableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil )
     }
     
+    // Clear all tasks in CoreData
     private func clearTasks() {
         let context = getContext()
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -70,14 +77,18 @@ class TableViewController: UITableViewController {
             print(error.localizedDescription)
         }
     }
+    
+    // Add new record in CoreData
     private func saveTask(withTitle title: String) {
         let context = getContext()
          
         guard let entity = NSEntityDescription.entity(forEntityName: "Task", in: context) else {return}
         
+        // Create new task
         let taskObject = Task(entity: entity, insertInto: context)
         taskObject.title = title
         
+        // Save new task in memory at 0 position
         do {
             try context.save()
 //            tasks.append(taskObject)
@@ -87,6 +98,7 @@ class TableViewController: UITableViewController {
         }
     }
     
+    // Get context for app
     private func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
