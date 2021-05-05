@@ -55,7 +55,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         cell.backgroundColor = .clear
-         cell.textLabel?.textColor = .purple
+         cell.textLabel?.textColor = .systemBlue
         
         
         let taskTitle = tasks[indexPath.row].title
@@ -91,6 +91,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func toggleCompletion(cell: UITableViewCell, isCompleted: Bool) {
         cell.accessoryType = isCompleted ? .checkmark : .none
+        cell.textLabel?.textColor = isCompleted ? .gray : #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
     }
 
     @IBAction func addCellTapped(_ sender: UIBarButtonItem) {
