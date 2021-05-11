@@ -61,11 +61,11 @@
 				8560A0B2261197BA0026D429 /* AppDelegate.swift */,
 				8560A0B4261197BA0026D429 /* SceneDelegate.swift */,
 				8560A0B6261197BA0026D429 /* ViewController.swift */,
+				8560A0C72611988C0026D429 /* SecondViewController.swift */,
 				8560A0B8261197BA0026D429 /* Main.storyboard */,
 				8560A0BB261197BD0026D429 /* Assets.xcassets */,
 				8560A0BD261197BD0026D429 /* LaunchScreen.storyboard */,
 				8560A0C0261197BD0026D429 /* Info.plist */,
-				8560A0C72611988C0026D429 /* SecondViewController.swift */,
 			);
 			path = GCDTutorial;
 			sourceTree = "<group>";

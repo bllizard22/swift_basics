@@ -12,8 +12,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var imageURL: URL?
-    var image: UIImage? {
+    private var imageURL: URL?
+    private var image: UIImage? {
         get {
             return imageView.image
         }
@@ -28,14 +28,47 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchImage()
+        delay(3) {
+            self.alertLogin()
+        }
     }
     
-    func fetchImage() {
+    private func delay(_ delay: Double, closure: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            closure()
+        }
+    }
+    
+    private func alertLogin() {
+        let alertC = UIAlertController(title: "Login?", message: "Please login", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        alertC.addAction(okAction)
+        alertC.addAction(cancelAction)
+        alertC.addTextField { (usernameTF) in
+            usernameTF.placeholder = "Login"
+        }
+        alertC.addTextField { (passwordTF) in
+            passwordTF.placeholder = "Password"
+            passwordTF.isSecureTextEntry = true
+        }
+        
+        self.present(alertC, animated: true, completion: nil)
+    }
+    
+    private func fetchImage() {
         imageURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Apple_park_cupertino_2019.jpg/2880px-Apple_park_cupertino_2019.jpg")
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
-        guard let url = imageURL, let imageData = try? Data(contentsOf: url) else { return }
-        self.image = UIImage(data: imageData)
+        
+        let queue = DispatchQueue.global(qos: .utility)
+        queue.async {
+            guard let url = self.imageURL, let imageData = try? Data(contentsOf: url) else { return }
+            DispatchQueue.main.async {
+                self.image = UIImage(data: imageData)
+            }
+        }
     }
 
 }
